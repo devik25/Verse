@@ -8,19 +8,19 @@ function Sidebar() {
       <div className='nav_box'>
           <div>DISCOVER</div>
           <ul>
-              <li>Trending</li>
-              <li>New Release</li>
-              <li>Recommended</li>
+              <li><img className='nav_icons' src={require('./images/icons/trend.png')}/>Trending</li>
+              <li><img className='nav_icons' src={require('./images/icons/new.png')}/>New Release</li>
+              <li><img className='nav_icons' src={require('./images/icons/recommend.png')}/>Recommended</li>
           </ul>
       </div>
 
       <div className='nav_box'>
           <div>LIBRARY</div>
           <ul>
-              <li>Albums</li>
-              <li>Radio</li>
-              <li>Liked</li>
-              <li>History</li>
+              <li><img className='nav_icons' src={require('./images/icons/albums.png')}/>Albums</li>
+              <li><img className='nav_icons' src={require('./images/icons/radio.png')}/>Radio</li>
+              <li><img className='nav_icons' src={require('./images/icons/like.png')}/>Liked</li>
+              <li><img className='nav_icons' src={require('./images/icons/history.png')}/>History</li>
           </ul>
       </div>
 

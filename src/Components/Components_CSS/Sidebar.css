@@ -1,0 +1,29 @@
+.container {
+  background-color: #0b121b;
+  height: 100vh;
+  width: 300px;
+  position: relative;
+}
+
+.logo {
+  margin: 30px 0 0 50px;
+}
+
+.nav_box {
+  color: white;
+  margin: 50px 50px;
+}
+
+.nav_box div {
+  opacity: 50%;
+  font-weight: 300;
+  font-size: 15px;
+  list-style-type: none;
+}
+
+.nav_box li {
+  font-weight: 300;
+  font-size: 18px;
+  list-style-type: none;
+  margin-top: 30px;
+}

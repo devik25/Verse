@@ -13,6 +13,7 @@
 }
 
 .search {
+  caret-color: #313131;
   border: 1px solid #0b121b;
   background-color: rgba(255, 255, 255, 0.295);
   border-radius: 40px;
@@ -21,7 +22,7 @@
   font-weight: 300;
   color: #ffffff;
   padding: 0 25px;
-  height: 40px;
+  height: 45px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;

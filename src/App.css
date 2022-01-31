@@ -1,5 +1,7 @@
 .color {
   background-color: rgb(3, 15, 27);
+  background-image: url("./Components/images/icons/cover_prop.png");
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;

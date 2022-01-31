@@ -1,8 +1,9 @@
 .container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
   background-color: #0b121b;
-  height: 100vh;
   width: 300px;
-  position: relative;
 }
 
 .logo {

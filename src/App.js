@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import Sidebar from './Components/Sidebar';
+import Searchbar_light from './Components/Searchbar_light';
 import './App.css';
 
 class App extends Component {
   state = {  } 
   render() { 
     return (
-      <react-fragmentation>
+      <div className='color'>
       
         <Sidebar/>
+        <Searchbar_light/>
        
-      </react-fragmentation>
+      </div>
     );
   }
 }

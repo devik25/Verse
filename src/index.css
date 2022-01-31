@@ -2,3 +2,7 @@
   margin: 0;
   font-family: "Outfit", sans-serif;
 }
+
+.main_contain {
+  background-color: rgb(15, 19, 22);
+}

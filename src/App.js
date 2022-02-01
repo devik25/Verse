@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from './Components/Sidebar';
 import Searchbar_light from './Components/Searchbar_light';
+import Song_card from './Components/Song_card';
 import './App.css';
 
 class App extends Component {
@@ -9,8 +10,10 @@ class App extends Component {
     return (
       <div className='color'>
       
-        <Sidebar/>
+        {/* <Sidebar/> */}
         <Searchbar_light/>
+        <Song_card/>
+        <Song_card/>
        
       </div>
     );

@@ -12,9 +12,14 @@ class App extends Component {
       
         {/* <Sidebar/> */}
         <Searchbar_light/>
-        <Song_card/>
-        <Song_card/>
-       
+        <div className='flexme'>
+          <Song_card/>
+          <Song_card/>
+          <Song_card/>
+          <Song_card/>
+          <Song_card/>
+          <Song_card/>
+        </div>       
       </div>
     );
   }

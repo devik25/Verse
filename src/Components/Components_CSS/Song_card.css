@@ -1,5 +1,5 @@
 .song_card {
-  margin: 100px 20px 0 30px;
+  margin: 100px 20px 0 20px;
   width: 170px;
   height: 180px;
   border-radius: 2px;
@@ -7,17 +7,28 @@
   background-image: url("../images/localtrain.jpg");
   background-size: cover;
   background-position: center;
-  transition: all ease-in-out 1s;
+  transition: all ease-in-out 0.7s;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  -webkit-transition: all ease-in-out 1s;
-  -moz-transition: all ease-in-out 1s;
-  -ms-transition: all ease-in-out 1s;
-  -o-transition: all ease-in-out 1s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  -ms-transition: all ease-in-out 0.7s;
+  -o-transition: all ease-in-out 0.7s;
 }
 
 .song_card:hover {
-  width: 200px;
+  transform: scale(1.03);
+  border: 1px solid rgba(80, 80, 80, 0.473);
+  box-shadow: 0px 2px 4px rgb(7, 7, 7);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+
+.card {
+  height: inherit;
+  width: inherit;
 }

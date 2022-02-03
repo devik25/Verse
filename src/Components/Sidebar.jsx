@@ -3,7 +3,7 @@ import './Components_CSS/Sidebar.css'
 
 function Sidebar() {
   return <h1 className='container'>
-      <img className='logo' src={require('./images/logo.png')} width="100px" />
+      <img className='logo' src={require('./images/logo.png')} width="90px" />
 
       <div className='nav_box'>
           <div>DISCOVER</div>

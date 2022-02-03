@@ -1,0 +1,13 @@
+.heading {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 35px;
+  margin-left: 50px;
+  color: white;
+}
+
+.songs_container {
+  display: flex;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}

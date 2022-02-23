@@ -23,7 +23,13 @@
 }
 
 .black_grad {
-  background-image: linear-gradient(to bottom, rgb(55, 57, 95, 0), #04040d);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(55, 57, 95, 0),
+    rgba(55, 57, 95, 0.329),
+    #04040d,
+    #04040d
+  );
   width: 100%;
   height: 100%;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import './Components_CSS/Searchbar.css'
 
-function Searchbar_light() {
-  return <div className='Searchbar'>
-      <input className='search'>
+function Searchbar_light(props) {
 
-      </input>
+  return <div className='Searchbar'>
+  
+  <input className='search' type="text" placeholder="search"></input>
+
       <div className='link'>
         <div>
         Download

@@ -1,13 +1,20 @@
 .heading {
   font-size: 24px;
   font-weight: 400;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   margin-left: 50px;
   color: white;
 }
 
+.songs_container::-webkit-scrollbar {
+  display: none;
+}
+
 .songs_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  overflow-x: scroll;
+  overflow-y: hidden;
   margin-left: 50px;
   margin-bottom: 50px;
 }

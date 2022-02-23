@@ -12,6 +12,15 @@ function Songs_container() {
     <Song_card/>
     <Song_card/>
     <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    <Song_card/>
+    
     </div>
   </div>;
 }

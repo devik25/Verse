@@ -19,7 +19,7 @@ import './App.css';
 
 class App extends Component {
   state = { 
-    searched:'arijit',
+    searched:'darshan',
     queued_list:null,
     current_song:null,
     current_song_link:null,
@@ -94,7 +94,7 @@ play_pause = async ()=>{
           </div>
         </div>        
         
-        <Audio_player song={this.state.current_song_link} play_pause={this.play_pause} update_queue={this.update_queue} next_song={this.next_song} prev_song={this.prev_song}/>
+        <Audio_player song={this.state.current_song_link} status={this.state.status} play_pause={this.play_pause} update_queue={this.update_queue} next_song={this.next_song} prev_song={this.prev_song}/>
 
       </div>
 

@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import './Components_CSS/Audio_player.css'
 
 
 function Audio_player(props) {
+  const audio = useRef(null);
 
+  useEffect(()=>{
+    console.log(audio.current);
+    if(props.status === 'play'){
+      audio.current.play();
+    }
+    else{
+      audio.current.pause();
+  }
+  });
 
   return (
     <div className='playbar'>
@@ -11,8 +21,7 @@ function Audio_player(props) {
         <button onClick={()=>props.update_queue()}>Queue</button>
         <button onClick={()=>props.play_pause()}>play</button>
         <button onClick={()=>props.next_song()}>next</button>
-        <audio className='player' src={props.song} controls type="audio/mp3"></audio>
-        
+        <audio ref={audio} className='player' src={props.song} controls autoPlay type="audio/mp3"></audio>       
     </div>
   )
 }

@@ -3,6 +3,7 @@ import Sidebar from './Components/Sidebar';
 import Searchbar_light from './Components/Searchbar_light';
 import Song_card from './Components/Song_card';
 import Songs_container from './Components/Songs_container';
+import Audio_player from './Components/Audio_player';
 import './App.css';
 
 // async fetch_song_list(){
@@ -18,14 +19,15 @@ import './App.css';
 
 class App extends Component {
   state = { 
-    searched:'havana',
+    searched:'arijit',
     queued_list:null,
     current_song:null,
     current_song_link:null,
-    song_count:0
+    song_count:0,
+    status:'play'
 };
 
-async update_queue(){
+update_queue = async ()=>{
   let url = 'https://jiosaavn-api-v3.vercel.app/search?query='+this.state.searched;
   const response = await fetch(url);
   const data = await response.json();
@@ -34,30 +36,44 @@ async update_queue(){
   console.log(this.state.queued_list);
 }
 
-async song_player(){
+song_player = async ()=>{
   let song = this.state.queued_list[this.state.song_count].api_url.song;
   const response = await fetch(song);
   const data = await response.json();
   this.setState({current_song:data});
-  this.setState({current_song_link:data.media_url});
+  let link = data.media_url.slice(0, data.media_url.length-7);
+  link+='320.mp4';
+  console.log(link);
+  this.setState({current_song_link:link});
 }
 
-async next_song(){
+next_song = async ()=>{
   const l = this.state.queued_list.length;
   let cnt = this.state.song_count;
   if(cnt == l-1) cnt=0;
   else cnt++;
-  this.setState({song_count:cnt});
+  await this.setState({song_count:cnt});
   this.song_player();
 }
 
-async prev_song(){
+prev_song = async ()=>{
   const l = this.state.queued_list.length;
   let cnt = this.state.song_count;
   if(cnt == 0) cnt=l-1;
   else cnt--;
-  this.setState({song_count:cnt});
+  await this.setState({song_count:cnt});
   this.song_player();
+}
+
+play_pause = async ()=>{
+  const status = this.state.status;
+  if(status === 'play'){
+    this.setState({status:'pause'});
+  }
+  else{
+    this.setState({status:'play'});
+  }
+  console.log(this.state.status);
 }
 
 
@@ -66,7 +82,7 @@ async prev_song(){
       
       <div className='main_section'>
 
-        {/* <div className='left'>
+        <div className='left'>
           <Sidebar/>
         </div>
             
@@ -76,14 +92,9 @@ async prev_song(){
             <Songs_container/>
             <Songs_container/>
           </div>
-        </div>         */}
+        </div>        
         
-        <button onClick={()=>this.prev_song()}>prev</button>
-        <button onClick={()=>this.update_queue()}>Play</button>
-        <button onClick={()=>this.next_song()}>next</button>
-        <div>
-        <audio src={this.state.current_song_link} controls autoPlay type="audio/mp3"></audio>
-        </div>
+        <Audio_player song={this.state.current_song_link} play_pause={this.play_pause} update_queue={this.update_queue} next_song={this.next_song} prev_song={this.prev_song}/>
 
       </div>
 

@@ -1,11 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Components_CSS/Searchbar.css'
 
 function Searchbar_light(props) {
+  
+
+  const[song, setSong]=useState('');
+
+  const handleSubmit = e=>{
+    e.preventDefault();
+    e.target.reset();
+    props.update_song(song);
+    console.log(e);
+  }
+
+  const handleChange = e=>{
+    setSong(e.target.value);
+    console.log(e.target.value);
+  }
 
   return <div className='Searchbar'>
-  
-  <input className='search' type="text" placeholder="search"></input>
+
+  <form onSubmit={handleSubmit}>
+    <input onChange={handleChange} className='search' type="text" placeholder="search"></input>
+  </form>
 
       <div className='link'>
         <div>

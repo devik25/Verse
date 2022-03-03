@@ -19,13 +19,17 @@ import './App.css';
 
 class App extends Component {
   state = { 
-    searched:'darshan',
-    queued_list:null,
-    current_song:null,
-    current_song_link:null,
+    searched:'',
+    queued_list:'',
+    current_song:'',
+    current_song_link:'',
     song_count:0,
     status:'play'
 };
+
+update_song = async(song)=>{
+  this.setState({searched:song});
+}
 
 update_queue = async ()=>{
   let url = 'https://jiosaavn-api-v3.vercel.app/search?query='+this.state.searched;
@@ -88,9 +92,9 @@ play_pause = async ()=>{
             
         <div className='right'> 
           <div className='black_grad'>
-            <Searchbar_light/>     
-            <Songs_container/>
-            <Songs_container/>
+            <Searchbar_light song={this.state.searched} update_song={this.update_song} />     
+            <Songs_container fetch_songByName={this.fetch_songByName}/>
+            {/* <Songs_container/> */}
           </div>
         </div>        
         

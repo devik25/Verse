@@ -2,27 +2,20 @@ import React from 'react';
 import './Components_CSS/Songs_container.css'
 import Song_card from './Song_card';
 
-function Songs_container() {
+
+const artists = ['Arijit', 'Shirley', 'Rahana', 'Armaan', 'Darshan', 'Havana'];
+
+function Songs_container(props) {
+
   return <div>
     <div className='heading'>
         Albums
     </div>
     <div className='songs_container'>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    <Song_card/>
-    
+    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
     </div>
   </div>;
+  
 }
 
 export default Songs_container;

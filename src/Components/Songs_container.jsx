@@ -3,7 +3,7 @@ import './Components_CSS/Songs_container.css'
 import Song_card from './Song_card';
 
 
-const artists = ['Arijit', 'Shirley', 'Rahana', 'Armaan', 'Darshan', 'Havana'];
+const artists = ['Arijit', 'Shirley', 'Salman', 'Armaan', 'Darshan', 'Havana'];
 
 function Songs_container(props) {
 
@@ -14,6 +14,14 @@ function Songs_container(props) {
     <div className='songs_container'>
     {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
     </div>
+
+    <div className='heading'>
+        Artists
+    </div>
+    <div className='songs_container'>
+    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    </div>
+
   </div>;
   
 }

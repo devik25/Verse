@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect} from 'react';
 import Sidebar from './Components/Sidebar';
 import Searchbar_light from './Components/Searchbar_light';
 import Song_card from './Components/Song_card';
@@ -26,6 +26,8 @@ class App extends Component {
     song_count:0,
     status:'play'
 };
+
+// useEffect();
 
 update_song = async(song)=>{
   this.setState({searched:song});
@@ -81,7 +83,9 @@ play_pause = async ()=>{
 }
 
 
+
   render() { 
+    
     return (
       
       <div className='main_section'>

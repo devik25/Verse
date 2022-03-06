@@ -22,6 +22,7 @@ class App extends Component {
     searched:'',
     queued_list:'',
     current_song:'',
+    current_song_img:'',
     current_song_link:'',
     song_count:0,
     status:'play'
@@ -51,6 +52,7 @@ song_player = async ()=>{
   link+='320.mp4';
   console.log(link);
   this.setState({current_song_link:link});
+  this.setState({current_song_img:data.image});
 }
 
 next_song = async ()=>{
@@ -82,10 +84,8 @@ play_pause = async ()=>{
   console.log(this.state.status);
 }
 
-
-
-  render() { 
-    
+  render() {
+        
     return (
       
       <div className='main_section'>
@@ -102,7 +102,7 @@ play_pause = async ()=>{
           </div>
         </div>        
         
-        <Audio_player song={this.state.current_song_link} status={this.state.status} play_pause={this.play_pause} update_queue={this.update_queue} next_song={this.next_song} prev_song={this.prev_song}/>
+        <Audio_player song_img={this.state.current_song_img} song={this.state.current_song_link} status={this.state.status} play_pause={this.play_pause} update_queue={this.update_queue} next_song={this.next_song} prev_song={this.prev_song}/>
 
       </div>
 

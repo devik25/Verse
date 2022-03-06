@@ -22,6 +22,20 @@ function Songs_container(props) {
     {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
     </div>
 
+    <div className='heading'>
+        Artists
+    </div>
+    <div className='songs_container'>
+    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    </div>
+
+    <div className='heading'>
+        Artists
+    </div>
+    <div className='songs_container'>
+    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    </div>
+
   </div>;
   
 }

@@ -56,6 +56,11 @@
   padding-left: 25px;
 }
 
+.graph {
+  width: 30px;
+  height: 30px;
+}
+
 audio::-webkit-media-controls-panel {
   height: 100%;
   background-color: #070e16;

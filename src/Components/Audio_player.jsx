@@ -3,6 +3,7 @@ import './Components_CSS/Audio_player.css'
 import play from '../Components/images/controls/play.svg'
 import pause from '../Components/images/controls/pause.svg'
 import graph from '../Components/images/controls/graph.svg'
+import equalizer from '../Components/images/controls/equalizer.gif'
 
 function Audio_player(props) {
   const audio = useRef(null);

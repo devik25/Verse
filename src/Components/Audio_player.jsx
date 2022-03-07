@@ -26,13 +26,17 @@ function Audio_player(props) {
   }
   });
 
-  console.log(props.song_img);
+  // console.log(props.song_img);
 
   return (
     <div className='playbar'>
       <div className='playBox'>
         <img className='graph' src={graph}></img>
         <img className='audio_image' src={props.song_img}></img>
+        <div>
+          <div className='playbox_title'>{props.song_name}</div>
+          <div className='playbox_album'>{props.song_album}</div>
+        </div>
 
         {/* <button>Button</button> */}
       </div>

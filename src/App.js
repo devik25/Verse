@@ -21,6 +21,9 @@ class App extends Component {
   state = { 
     searched:'',
     queued_list:'',
+    //Main playable content
+    current_song_name:'',
+    current_song_album:'',
     current_song:'',
     current_song_img:'',
     current_song_link:'',
@@ -40,7 +43,7 @@ update_queue = async ()=>{
   const data = await response.json();
   this.setState({queued_list:data.results});
   this.song_player();
-  console.log(this.state.queued_list);
+  // console.log(this.state.queued_list);
 }
 
 song_player = async ()=>{
@@ -50,9 +53,11 @@ song_player = async ()=>{
   this.setState({current_song:data});
   let link = data.media_url.slice(0, data.media_url.length-7);
   link+='320.mp4';
-  console.log(link);
+  // console.log(data);
   this.setState({current_song_link:link});
   this.setState({current_song_img:data.image});
+  this.setState({current_song_name:data.song});
+  this.setState({current_song_album:data.album});
 }
 
 next_song = async ()=>{
@@ -81,7 +86,7 @@ play_pause = async ()=>{
   else{
     this.setState({status:'play'});
   }
-  console.log(this.state.status);
+  // console.log(this.state.status);
 }
 
   render() {
@@ -102,7 +107,16 @@ play_pause = async ()=>{
           </div>
         </div>        
         
-        <Audio_player song_img={this.state.current_song_img} song={this.state.current_song_link} status={this.state.status} play_pause={this.play_pause} update_queue={this.update_queue} next_song={this.next_song} prev_song={this.prev_song}/>
+        <Audio_player 
+        song_img={this.state.current_song_img} 
+        song_name={this.state.current_song_name} 
+        song_album={this.state.current_song_album} 
+        song={this.state.current_song_link} 
+        status={this.state.status} 
+        play_pause={this.play_pause} 
+        update_queue={this.update_queue} 
+        next_song={this.next_song} 
+        prev_song={this.prev_song}/>
 
       </div>
 

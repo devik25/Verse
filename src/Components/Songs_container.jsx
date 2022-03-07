@@ -4,6 +4,7 @@ import Song_card from './Song_card';
 
 
 const artists = ['Arijit', 'Shirley', 'Salman', 'Armaan', 'Darshan', 'Havana'];
+const albums = ['Yaarian', 'Jugnoo', 'Sanam', 'Wake up sid', 'Lagaan', 'Raone'];
 
 function Songs_container(props) {
 
@@ -19,7 +20,7 @@ function Songs_container(props) {
         Artists
     </div>
     <div className='songs_container'>
-    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    {albums.map(album=>(<Song_card key={album} name={album}/>))}      
     </div>
 
     <div className='heading'>

@@ -17,6 +17,21 @@
 .playBox {
   /* background-color: aqua; */
   width: 20%;
+  display: flex;
+}
+
+.playbox_title {
+  font-weight: 400;
+  height: 20px;
+  margin-left: 15px;
+  color: white;
+  overflow-x: hidden;
+}
+
+.playbox_album {
+  font-weight: 300;
+  margin-left: 15px;
+  color: white;
 }
 
 .music_player {

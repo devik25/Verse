@@ -15,23 +15,30 @@
   width: 1000px;
 }
 .playBox {
-  /* background-color: aqua; */
-  width: 20%;
+  /* position: relative; */
+  overflow-x: hidden;
+  width: 18%;
   display: flex;
+  align-items: center;
+  margin-right: 40px;
 }
 
 .playbox_title {
-  font-weight: 400;
-  height: 20px;
+  font-weight: 300;
+  font-size: 18px;
+  height: 24px;
+  width: 300px;
   margin-left: 15px;
   color: white;
   overflow-x: hidden;
 }
 
 .playbox_album {
-  font-weight: 300;
+  height: 24px;
+  font-weight: 200;
   margin-left: 15px;
   color: white;
+  overflow-x: hidden;
 }
 
 .music_player {
@@ -56,6 +63,7 @@
   width: 40px;
   height: 40px;
   background-size: cover;
+  mask-size: cover;
 }
 
 .next {
@@ -65,6 +73,11 @@
   background-size: cover;
 }
 
+.prev:hover,
+.next:hover {
+  opacity: 0.7;
+}
+
 .audio_image {
   width: 45px;
   height: 45px;
@@ -72,57 +85,7 @@
 }
 
 .graph {
+  padding-top: 5%;
   width: 30px;
   height: 30px;
-}
-
-audio::-webkit-media-controls-panel {
-  height: 100%;
-  background-color: #070e16;
-  outline: none;
-  border-width: 0;
-}
-audio::-webkit-media-controls-mute-button {
-}
-audio::-webkit-media-controls-play-button {
-  transform: scale(2);
-  background-image: url(../images/icons/play_album.svg);
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  margin: 0 20px;
-}
-audio::-webkit-media-controls-pause-button {
-  opacity: 0.1;
-}
-
-audio::-webkit-media-controls-timeline-container {
-}
-audio::-webkit-media-controls-current-time-display {
-  color: white;
-  text-shadow: none;
-}
-audio::-webkit-media-controls-time-remaining-display {
-  color: white;
-  text-shadow: none;
-}
-audio::-webkit-media-controls-timeline {
-  background-color: #ff305c;
-}
-audio::-webkit-media-controls-volume-slider-container {
-}
-audio::-webkit-media-controls-volume-slider {
-}
-audio::-webkit-media-controls-seek-back-button {
-}
-audio::-webkit-media-controls-seek-forward-button {
-}
-audio::-webkit-media-controls-fullscreen-button {
-}
-audio::-webkit-media-controls-rewind-button {
-}
-audio::-webkit-media-controls-return-to-realtime-button {
-}
-audio::-webkit-media-controls-toggle-closed-captions-button {
 }

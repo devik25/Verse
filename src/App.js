@@ -53,7 +53,9 @@ song_player = async ()=>{
   this.setState({current_song:data});
   let link = data.media_url.slice(0, data.media_url.length-7);
   link+='320.mp4';
-  // console.log(data);
+  let img = data.image.slice(0, data.media_url.length-11);
+  img+='500x500.jpg';
+  console.log(data);
   this.setState({current_song_link:link});
   this.setState({current_song_img:data.image});
   this.setState({current_song_name:data.song});

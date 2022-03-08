@@ -6,24 +6,21 @@
   cursor: pointer;
   background-size: cover;
   background-position: center;
-  transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.5s;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  -webkit-transition: all ease-in-out 0.4s;
-  -moz-transition: all ease-in-out 0.4s;
-  -ms-transition: all ease-in-out 0.4s;
-  -o-transition: all ease-in-out 0.4s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
 }
 
 .song_card:hover {
-  transform: scale(1.01);
+  /* transform: scale(1.001); */
+  width: 180px;
   box-shadow: 0px 2px 4px rgb(7, 7, 7);
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  -o-transform: scale(1.01);
 }
 
 .song_card_black {
@@ -47,11 +44,11 @@
 }
 
 .song_card img:hover {
-  transform: scale(1.01);
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  -o-transform: scale(1.01);
+  transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
 }
 
 .song_card_black:hover {

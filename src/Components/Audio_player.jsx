@@ -17,7 +17,7 @@ function Audio_player(props) {
   }
 
   useEffect(()=>{
-    // console.log(audio.current);
+    console.log(audio.current);
     if(props.status === 'play'){
       audio.current.play();
     }
@@ -44,7 +44,19 @@ function Audio_player(props) {
           <button className='prev btn_reset'  onClick={()=>props.prev_song()}></button>
           <button style={{backgroundImage:props.status=='play'?"url("+pause+")":"url("+ play+")"}} className='play btn_reset' onClick={()=>props.play_pause()}></button>
           <button className='next btn_reset' onClick={()=>props.next_song()}></button>
-          <audio ref={audio} className='player' src={props.song} autoPlay type="audio/mp3"></audio>  
+          <audio 
+          ref={audio} 
+          className='player' 
+          src={props.song} 
+          onLoadedData={(e)=>{
+            console.log(e.currentTarget.duration);
+          }}
+
+          onTimeUpdate={(e)=>{
+            // console.log(e.currentTarget.currentTime);
+          }}
+          autoPlay 
+          type="audio/mp3"></audio>  
           <button onClick={()=>props.update_queue()}>Queue</button>
       </div>     
     </div>

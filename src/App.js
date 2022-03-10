@@ -34,7 +34,9 @@ class App extends Component {
 // useEffect();
 
 update_song = async(song)=>{
-  this.setState({searched:song});
+  await this.setState({searched:song});
+  await this.setState({song_cnt:0});
+  this.update_queue();
 }
 
 update_queue = async ()=>{
@@ -103,7 +105,9 @@ play_pause = async ()=>{
             
         <div className='right'> 
           <div className='black_grad'>
-            <Searchbar_light song={this.state.searched} update_song={this.update_song} />     
+            <Searchbar_light 
+            song={this.state.searched} 
+            update_song={this.update_song}/>     
             <Songs_container fetch_songByName={this.fetch_songByName}/>
             {/* <Songs_container/> */}
           </div>

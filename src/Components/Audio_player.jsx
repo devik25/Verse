@@ -57,7 +57,7 @@ function Audio_player(props) {
           }}
           autoPlay 
           type="audio/mp3"></audio>  
-          <button onClick={()=>props.update_queue()}>Queue</button>
+          {/* <button onClick={()=>props.update_queue()}>Queue</button> */}
       </div>     
     </div>
   )

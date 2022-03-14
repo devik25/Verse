@@ -5,6 +5,10 @@
   margin: 30px 50px 250px 50px;
 }
 
+.Searchbar.dark {
+  margin: 30px 50px 30px 50px;
+}
+
 .search:focus {
   outline: none;
 }
@@ -14,16 +18,22 @@
   border: 1px solid #0b121b;
   background-color: rgba(255, 255, 255, 0.295);
   border-radius: 40px;
-  width: 600px;
+  width: 580px;
   font-size: 20px;
   font-weight: 300;
   color: #ffffff;
   padding: 0 25px;
-  height: 40px;
+  height: 36px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
+}
+
+.search.dark {
+  color: black;
+  background-color: rgba(11, 28, 27, 0.04);
+  border: 1.5px solid #8b8b8b;
 }
 
 .link {
@@ -33,6 +43,11 @@
   color: white;
   font-size: 18px;
   font-weight: 300;
+}
+
+.link.dark {
+  color: black;
+  font-weight: 400;
 }
 
 .link div {

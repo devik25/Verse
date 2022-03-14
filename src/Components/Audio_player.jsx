@@ -37,25 +37,24 @@ function Audio_player(props) {
   });
 
   useEffect(()=>{
+    let minute = 0;
     let curr_duration = (current/duration)*100;
+    // console.log(current);
+    console.log(duration);
     //Change track after completion
     if(current === duration){
       props.next_song();
     }
 
+    
     //Current Minutes
-    if((current/60).toFixed(0).length === 2){
-      set_curr_min((current/60).toFixed(0))
-    }
-    else{
-      set_curr_min('0' + (current/60).toFixed(0))
-    }
+    set_curr_min('0' + Math.trunc(current/59))
     //Current seconds
-    if((current%60).toFixed(0).length === 2){
-      set_curr_sec((current%60).toFixed(0))
+    if((current%59).toFixed(0).length === 2){
+      set_curr_sec((current%59).toFixed(0))
     }
     else{
-      set_curr_sec('0' + (current%60).toFixed(0))
+      set_curr_sec('0' + (current%59).toFixed(0))
     }
 
     //Duration Minutes
@@ -108,11 +107,11 @@ function Audio_player(props) {
           className='player' 
           src={props.song} 
           onLoadedData={(e)=>{
-            setduration(e.currentTarget.duration.toFixed(2))
+            setduration(e.currentTarget.duration.toFixed(0))
           }}
 
           onTimeUpdate={(e)=>{
-            setcurrent(e.currentTarget.currentTime.toFixed(2));
+            setcurrent(e.currentTarget.currentTime.toFixed(0));
           }}
           autoPlay 
           type="audio/mp3"></audio>

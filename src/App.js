@@ -3,6 +3,8 @@ import Sidebar from './Components/Sidebar';
 import Searchbar_light from './Components/Searchbar_light';
 import Song_card from './Components/Song_card';
 import Songs_container from './Components/Songs_container';
+import Searchbar_dark from './Components/Searchbar_dark'
+import Navigation_content from './Components/Navigation_content';
 import Audio_player from './Components/Audio_player';
 import './App.css';
 
@@ -29,7 +31,7 @@ class App extends Component {
     current_song_link:'',
     //Controls
     song_count:0,
-    status:'play',
+    status:'pause',
     total_duration:'',
     current_duration:0
 };
@@ -106,15 +108,21 @@ play_pause = async ()=>{
           <Sidebar/>
         </div>
             
-        <div className='right'> 
+        {/* <div className='right'> 
           <div className='black_grad'>
             <Searchbar_light 
             song={this.state.searched} 
             update_song={this.update_song}/>     
             <Songs_container fetch_songByName={this.fetch_songByName}/>
-            {/* <Songs_container/> */}
           </div>
-        </div>        
+        </div>         */}
+
+        <div className='navigate'>
+        <Searchbar_dark 
+        song={this.state.searched} 
+        update_song={this.update_song}/>
+        <Navigation_content/>
+        </div>
         
         <Audio_player 
         song_img={this.state.current_song_img} 

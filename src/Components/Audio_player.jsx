@@ -1,12 +1,21 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import './Components_CSS/Audio_player.css'
+import './Components_CSS/Slider.css'
 import play from '../Components/images/controls/play.svg'
 import pause from '../Components/images/controls/pause.svg'
 import graph from '../Components/images/controls/graph.svg'
-import equalizer from '../Components/images/controls/equalizer.gif'
 
 function Audio_player(props) {
   const audio = useRef(null);
+  const slide = useRef(null);
+  const volume = useRef(null);
+
+  const[current, setcurrent] = useState(0);
+  const[duration, setduration] = useState(0);
+  const[curr_min, set_curr_min] = useState(0);
+  const[curr_sec, set_curr_sec] = useState(0);
+  const[dur_min, dur_curr_min] = useState(0);
+  const[dur_sec, dur_curr_sec] = useState(0);
 
   let play_btn={
     backgroundImage: "url("+ play +")",
@@ -17,7 +26,6 @@ function Audio_player(props) {
   }
 
   useEffect(()=>{
-    console.log(audio.current);
     if(props.status === 'play'){
       audio.current.play();
     }
@@ -26,7 +34,21 @@ function Audio_player(props) {
   }
   });
 
-  // console.log(props.song_img);
+  useEffect(()=>{
+    let curr_duration = (current/duration)*100;
+    if((current/60).toFixed(0).length )
+    slide.current.value = curr_duration;
+  }, [current])
+
+  const update_duration = (e)=>{
+    let curr_duration = (duration/100)*e.currentTarget.value;
+    audio.current.currentTime = curr_duration;
+  }
+
+  const update_volume = (e)=>{
+    audio.current.volume = e.currentTarget.value/100;
+  }
+
 
   return (
     <div className='playbar'>
@@ -49,15 +71,23 @@ function Audio_player(props) {
           className='player' 
           src={props.song} 
           onLoadedData={(e)=>{
-            console.log(e.currentTarget.duration);
+            setduration(e.currentTarget.duration.toFixed(2))
           }}
 
           onTimeUpdate={(e)=>{
-            // console.log(e.currentTarget.currentTime);
+            setcurrent(e.currentTarget.currentTime.toFixed(2));
           }}
           autoPlay 
-          type="audio/mp3"></audio>  
-          {/* <button onClick={()=>props.update_queue()}>Queue</button> */}
+          type="audio/mp3"></audio>
+
+          <div className='slider_container'>
+            <div className='duration'>{(current/60).toFixed(0)}:{(current%60).toFixed(0)}</div>
+            <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
+            <div className='duration'>{(duration/60).toFixed(0)}:{(duration%60).toFixed(0)}</div>
+          </div>
+
+          <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>
+
       </div>     
     </div>
   )

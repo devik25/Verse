@@ -27,8 +27,11 @@ class App extends Component {
     current_song:'',
     current_song_img:'',
     current_song_link:'',
+    //Controls
     song_count:0,
-    status:'play'
+    status:'play',
+    total_duration:'',
+    current_duration:0
 };
 
 // useEffect();

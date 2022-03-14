@@ -1,0 +1,19 @@
+.slider_container {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  margin: 0 20px;
+}
+
+.slider {
+  width: 700px;
+  cursor: pointer;
+}
+
+.duration {
+  width: 30px;
+  padding: 0 10px;
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+}

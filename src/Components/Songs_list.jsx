@@ -3,7 +3,18 @@ import './Components_CSS/Songs_list.css'
 
 function Songs_list() {
   return (
-    <div>Songs_list</div>
+    <div className='song_list'>
+        <div className='song_list_text'>
+            <div className='num'>
+            1
+            </div>
+
+            <div className='song_name'>
+            devil
+            </div>
+        </div>
+        <div className='song_list_time'>04:55</div>
+    </div>
   )
 }
 

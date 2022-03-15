@@ -13,28 +13,28 @@ function Songs_container(props) {
         Albums
     </div>
     <div className='songs_container'>
-    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    {artists.map(artist=>(<Song_card key={artist} name={artist} update_all = {props.update_all}/>))}      
     </div>
 
     <div className='heading'>
         Artists
     </div>
     <div className='songs_container'>
-    {albums.map(album=>(<Song_card key={album} name={album}/>))}      
+    {albums.map(album=>(<Song_card key={album} name={album} update_all = {props.update_all}/>))}      
     </div>
 
     <div className='heading'>
         Artists
     </div>
     <div className='songs_container'>
-    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    {artists.map(artist=>(<Song_card key={artist} name={artist} update_all = {props.update_all}/>))}      
     </div>
 
     <div className='heading'>
         Artists
     </div>
     <div className='songs_container'>
-    {artists.map(artist=>(<Song_card key={artist} name={artist}/>))}      
+    {artists.map(artist=>(<Song_card key={artist} name={artist} update_all = {props.update_all}/>))}      
     </div>
 
   </div>;

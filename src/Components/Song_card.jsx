@@ -5,7 +5,10 @@ import play_album from './images/icons/play_album.svg'
 
 function Song_card(props) {
 
-  const[song, setSong] = useState('');
+  const[image, setImage] = useState('');
+  const[song_name, setSong_name] = useState('');
+  const[album, setAlbum] = useState('');
+  const[link, setLink] = useState('');
 
   const fetch_songByName = async (name)=>{
     let url = 'https://jiosaavn-api-v3.vercel.app/search?query='+name;
@@ -14,16 +17,29 @@ function Song_card(props) {
     let song = data.results[0].api_url.song;
     const song_response = await fetch(song);
     const song_data = await song_response.json();
-    song = song_data.image;
-    setSong(song);
+    // song = song_data.image;
+    await setSong_name(song_data.song);
+    await setAlbum(song_data.album);
+    let link = song_data.media_url.slice(0, song_data.media_url.length-7);
+    link+='320.mp4';
+    let img = song_data.image.slice(0, song_data.image.length-11);
+    img+='500x500.jpg';
+    await setImage(img);
+    console.log(song_name);
+    setLink(link);
+    // props.update_all(song_data.song, song_data.album, song_data.url, song_data.image);
   }
 
+  // props.update_all(song_name, album, link, image)
   fetch_songByName(props.name);
-  // console.log(song);
 
-  return <div style={{backgroundImage: 'url('+ song +')'}} className='song_card'>
+
+  return <div style={{backgroundImage: 'url('+ image +')'}} className='song_card'>
     <div className='song_card_black'>
-      <img style={{width:'50px'}} src={play_album}/>
+
+      <img onClick={()=>{props.update_all(song_name, album, link, image)}} style={{width:'50px'}} src={play_album}/>
+
+
     </div>
   </div>;
 }

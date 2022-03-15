@@ -8,16 +8,6 @@ import Navigation_content from './Components/Navigation_content';
 import Audio_player from './Components/Audio_player';
 import './App.css';
 
-// async fetch_song_list(){
-//   let url = 'https://jiosaavn-api-v3.vercel.app/search?query=jubin';
-//   const response = await fetch(url);
-//   const data = await response.json();
-//   let song = data.results[0].api_url.song;
-//   const song_response = await fetch(song);
-//   const song_data = await song_response.json();
-//   console.log(song_data.media_url);
-//   this.setState({song_link:song_data.media_url});
-// }
 
 class App extends Component {
   state = { 
@@ -37,6 +27,13 @@ class App extends Component {
 };
 
 // useEffect();
+
+update_all = async(name, album, link, img)=>{
+  await this.setState({current_song_link:link});
+  await this.setState({current_song_img:img});
+  await this.setState({current_song_name:name});
+  await this.setState({current_song_album:album});
+}
 
 update_song = async(song)=>{
   await this.setState({searched:song});
@@ -108,21 +105,21 @@ play_pause = async ()=>{
           <Sidebar/>
         </div>
             
-        {/* <div className='right'> 
+        <div className='right'> 
           <div className='black_grad'>
             <Searchbar_light 
             song={this.state.searched} 
             update_song={this.update_song}/>     
-            <Songs_container fetch_songByName={this.fetch_songByName}/>
+            <Songs_container update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>
           </div>
-        </div>         */}
+        </div>        
 
-        <div className='navigate'>
+        {/* <div className='navigate'>
         <Searchbar_dark 
         song={this.state.searched} 
         update_song={this.update_song}/>
         <Navigation_content/>
-        </div>
+        </div> */}
         
         <Audio_player 
         song_img={this.state.current_song_img} 

@@ -89,21 +89,22 @@
 }
 
 .player {
-  width: 8px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 audio {
   background-color: white;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 audio::-webkit-media-controls-panel {
   margin-left: 20px;
+  background-color: #070e16;
 }
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-play-button,

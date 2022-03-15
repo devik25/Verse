@@ -12,7 +12,7 @@ import './App.css';
 class App extends Component {
   state = { 
     searched:'',
-    queued_list:'',
+    queued_list:[],
     //Main playable content
     current_song_name:'',
     current_song_album:'',
@@ -35,9 +35,20 @@ update_all = async(name, album, link, img)=>{
   await this.setState({current_song_album:album});
 }
 
+update_cnt = async(count, name, album, link, img)=>{
+  // console.log("clicked")
+  await this.setState({song_count:count-1});
+  // console.log(this.state.cnt);
+  await this.setState({current_song_link:link});
+  await this.setState({current_song_img:img});
+  await this.setState({current_song_name:name});
+  await this.setState({current_song_album:album});
+  await this.setState({status:'play'})
+}
+
 update_song = async(song)=>{
   await this.setState({searched:song});
-  await this.setState({song_cnt:0});
+  await this.setState({song_count:0});
   this.update_queue();
 }
 
@@ -59,7 +70,7 @@ song_player = async ()=>{
   link+='320.mp4';
   let img = data.image.slice(0, data.image.length-11);
   img+='500x500.jpg';
-  console.log(data);
+  // console.log(data);
   this.setState({current_song_link:link});
   this.setState({current_song_img:img});
   this.setState({current_song_name:data.song});
@@ -72,6 +83,7 @@ next_song = async ()=>{
   if(cnt == l-1) cnt=0;
   else cnt++;
   await this.setState({song_count:cnt});
+  console.log(cnt);
   this.song_player();
 }
 
@@ -118,7 +130,7 @@ play_pause = async ()=>{
         <Searchbar_dark 
         song={this.state.searched} 
         update_song={this.update_song}/>
-        <Navigation_content/>
+        <Navigation_content list={this.state.queued_list} update_cnt={this.update_cnt}/>
         </div>
         
         <Audio_player 

@@ -40,7 +40,7 @@ function Audio_player(props) {
     let minute = 0;
     let curr_duration = (current/duration)*100;
     // console.log(current);
-    console.log(duration);
+    // console.log(duration);
     //Change track after completion
     if(current === duration){
       props.next_song();
@@ -58,12 +58,7 @@ function Audio_player(props) {
     }
 
     //Duration Minutes
-    if((duration/60).toFixed(0).length === 2){
-      set_dur_min((duration/60).toFixed(0))
-    }
-    else{
-      set_dur_min('0' + (duration/60).toFixed(0))
-    }
+    set_dur_min('0' + Math.trunc(duration/59))
     //Duration seconds
     if((duration%60).toFixed(0).length === 2){
       set_dur_sec((duration%60).toFixed(0))
@@ -86,7 +81,7 @@ function Audio_player(props) {
   }
 
   const down = ()=>{
-    console.log(audio.current.download);
+    // console.log(audio.current.download);
     // audio.current.controls();
   }
 

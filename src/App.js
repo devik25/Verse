@@ -57,11 +57,11 @@ song_player = async ()=>{
   this.setState({current_song:data});
   let link = data.media_url.slice(0, data.media_url.length-7);
   link+='320.mp4';
-  let img = data.image.slice(0, data.media_url.length-11);
+  let img = data.image.slice(0, data.image.length-11);
   img+='500x500.jpg';
   console.log(data);
   this.setState({current_song_link:link});
-  this.setState({current_song_img:data.image});
+  this.setState({current_song_img:img});
   this.setState({current_song_name:data.song});
   this.setState({current_song_album:data.album});
 }
@@ -105,21 +105,21 @@ play_pause = async ()=>{
           <Sidebar/>
         </div>
             
-        <div className='right'> 
+        {/* <div className='right'> 
           <div className='black_grad'>
             <Searchbar_light 
             song={this.state.searched} 
             update_song={this.update_song}/>     
             <Songs_container update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>
           </div>
-        </div>        
+        </div>         */}
 
-        {/* <div className='navigate'>
+        <div className='navigate'>
         <Searchbar_dark 
         song={this.state.searched} 
         update_song={this.update_song}/>
         <Navigation_content/>
-        </div> */}
+        </div>
         
         <Audio_player 
         song_img={this.state.current_song_img} 

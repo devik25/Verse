@@ -85,6 +85,11 @@ function Audio_player(props) {
     audio.current.volume = e.currentTarget.value/100;
   }
 
+  const down = ()=>{
+    console.log(audio.current.download);
+    // audio.current.controls();
+  }
+
 
   return (
     <div className='playbar'>
@@ -102,6 +107,15 @@ function Audio_player(props) {
           <button className='prev btn_reset'  onClick={()=>props.prev_song()}></button>
           <button style={{backgroundImage:props.status=='play'?"url("+pause+")":"url("+ play+")"}} className='play btn_reset' onClick={()=>props.play_pause()}></button>
           <button className='next btn_reset' onClick={()=>props.next_song()}></button>
+          <div className='slider_container'>
+            <div className='duration'>{curr_min}:{curr_sec}</div>
+            <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
+            <div className='duration'>{dur_min}:{dur_sec}</div>
+          </div>
+
+          <img className='volume' src={volume_on}></img>
+          <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>
+          {/* <a href={props.song} download> download </a> */}
           <audio 
           ref={audio} 
           className='player' 
@@ -114,16 +128,9 @@ function Audio_player(props) {
             setcurrent(e.currentTarget.currentTime.toFixed(0));
           }}
           autoPlay 
-          type="audio/mp3"></audio>
-
-          <div className='slider_container'>
-            <div className='duration'>{curr_min}:{curr_sec}</div>
-            <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
-            <div className='duration'>{dur_min}:{dur_sec}</div>
-          </div>
-
-          <img className='volume' src={volume_on}></img>
-          <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>
+          type="audio/mp3"
+          controls
+          ></audio>
 
       </div>     
     </div>

@@ -26,6 +26,7 @@
 
 .volume_slider {
   width: 120px;
+  margin-right: 20px;
 }
 
 input[type="range"] {
@@ -60,6 +61,11 @@ input[type="range"]::-webkit-slider-thumb {
   background-position-x: right;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: all 1ms ease-in;
+  -webkit-transition: all 1ms ease-in;
+  -moz-transition: all 1ms ease-in;
+  -ms-transition: all 1ms ease-in;
+  -o-transition: all 1ms ease-in;
 }
 
 /*Firefox */

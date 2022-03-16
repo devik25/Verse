@@ -1,5 +1,6 @@
 import React from 'react';
 import './Components_CSS/Sidebar.css';
+import { Link } from 'react-router-dom';
 import logo from './images/Logo.svg'
 import trend from './images/icons/trend.svg';
 import new_release from './images/icons/new.svg';
@@ -11,7 +12,7 @@ import history from './images/icons/history.svg'
 
 function Sidebar() {
   return<h1 className='container'>
-      <img className='logo' src={logo} width="90px" />
+      <Link to={'/'}><img className='logo' src={logo} width="90px" /></Link>
 
       <div className='nav_box'>
           <div>DISCOVER</div>

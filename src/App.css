@@ -54,3 +54,13 @@
 .navigate::-webkit-scrollbar {
   display: none;
 }
+
+@media (orientation: portrait) {
+  .left {
+    display: none;
+  }
+  .right,
+  .navigate {
+    left: 0;
+  }
+}

@@ -56,3 +56,12 @@
 .song_list_time.play {
   color: #ff305c;
 }
+
+@media (orientation: portrait) {
+  .song_list_album {
+    display: none;
+  }
+  .song_list_name {
+    width: 200px;
+  }
+}

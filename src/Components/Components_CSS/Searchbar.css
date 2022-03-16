@@ -85,4 +85,10 @@
   .link {
     display: none;
   }
+  .Searchbar {
+    margin: 30px 15px 250px 15px;
+  }
+  .Searchbar.dark {
+    margin: 30px 15px 30px 15px;
+  }
 }

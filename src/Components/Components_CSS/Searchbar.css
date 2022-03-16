@@ -5,6 +5,10 @@
   margin: 30px 50px 250px 50px;
 }
 
+.search_holder {
+  width: 500px;
+}
+
 .Searchbar.dark {
   margin: 30px 50px 30px 50px;
 }
@@ -18,7 +22,7 @@
   border: 1px solid #747474;
   background-color: rgba(255, 255, 255, 0.295);
   border-radius: 40px;
-  width: 150%;
+  width: 100%;
   font-size: 20px;
   font-weight: 300;
   color: #ffffff;
@@ -37,9 +41,9 @@
 }
 
 .link {
-  width: 15%;
+  width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   color: white;
   font-size: 18px;
   font-weight: 300;
@@ -51,6 +55,7 @@
 }
 
 .link div {
+  margin-left: 20px;
   cursor: pointer;
   transition: opacity ease-in-out 0.2s;
   -webkit-transition: opacity ease-in-out 0.2s;
@@ -74,4 +79,10 @@
 
 .Share:hover {
   margin-left: 10px;
+}
+
+@media (orientation: portrait) {
+  .link {
+    display: none;
+  }
 }

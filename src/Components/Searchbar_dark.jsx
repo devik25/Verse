@@ -22,7 +22,7 @@ function Searchbar_light(props) {
   return <div className='Searchbar dark'>
 
 <Link to={'/search'}>
-  <form onSubmit={handleSubmit}>
+  <form className='search_holder' onSubmit={handleSubmit}>
     <input onChange={handleChange} className='search dark' type="text" placeholder="search"></input>
   </form>
   </Link>

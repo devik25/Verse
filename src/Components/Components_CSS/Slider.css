@@ -1,7 +1,7 @@
 .slider_container {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
   margin: 0 20px;
 }
 
@@ -144,4 +144,12 @@ input[type="range"]::-ms-fill-upper {
 }
 input[type="range"]:focus::-ms-fill-upper {
   background: #367ebd;
+}
+
+@media (orientation: portrait) {
+  .slider_container,
+  .volume_slider,
+  .volume {
+    display: none;
+  }
 }

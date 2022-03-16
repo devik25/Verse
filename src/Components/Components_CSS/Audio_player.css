@@ -95,6 +95,7 @@
 }
 
 audio {
+  display: none;
   background-color: white;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -122,4 +123,13 @@ audio::-webkit-media-controls-fullscreen-button,
 audio::-webkit-media-controls-rewind-button,
 audio::-webkit-media-controls-return-to-realtime-button {
   visibility: hidden;
+}
+
+@media (orientation: portrait) {
+  .playBox {
+    width: 60%;
+  }
+  .music_player {
+    width: 40%;
+  }
 }

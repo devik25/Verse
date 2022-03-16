@@ -14,11 +14,11 @@
 }
 
 .search {
-  caret-color: #313131;
-  border: 1px solid #0b121b;
+  caret-color: #888888;
+  border: 1px solid #747474;
   background-color: rgba(255, 255, 255, 0.295);
   border-radius: 40px;
-  width: 580px;
+  width: 150%;
   font-size: 20px;
   font-weight: 300;
   color: #ffffff;

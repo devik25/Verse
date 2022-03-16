@@ -10,7 +10,7 @@ import liked from './images/icons/like.svg';
 import history from './images/icons/history.svg'
 
 function Sidebar() {
-  return <h1 className='container'>
+  return<h1 className='container'>
       <img className='logo' src={logo} width="90px" />
 
       <div className='nav_box'>

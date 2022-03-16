@@ -6,12 +6,15 @@ import pause from '../Components/images/controls/pause.svg'
 import volume_on from '../Components/images/controls/volume_on.svg'
 import volume_off from '../Components/images/controls/volume_off.svg'
 import graph from '../Components/images/controls/graph.svg'
+import graph_play from '../Components/images/controls/graph.gif'
 
 function Audio_player(props) {
   const audio = useRef(0);
   const slide = useRef(0);
   const volume = useRef(0);
 
+
+  const[grap, setGrap] = useState(graph);
   const[current, setcurrent] = useState(0);
   const[duration, setduration] = useState(0);
   const[curr_min, set_curr_min] = useState(0);
@@ -30,9 +33,11 @@ function Audio_player(props) {
   useEffect(()=>{
     if(props.status === 'play'){
       audio.current.play();
+      setGrap(graph_play);
     }
     else{
       audio.current.pause();
+      setGrap(graph);
   }
   });
 
@@ -89,7 +94,7 @@ function Audio_player(props) {
   return (
     <div className='playbar'>
       <div className='playBox'>
-        <img className='graph' src={graph}></img>
+        <img className='graph' src={grap}></img>
         <img className='audio_image' src={props.song_img}></img>
         <div>
           <div className='playbox_title'>{props.song_name}</div>

@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect} from 'react';
+import { Route, Routes} from 'react-router-dom';
 import Sidebar from './Components/Sidebar';
 import Searchbar_light from './Components/Searchbar_light';
 import Song_card from './Components/Song_card';
@@ -17,7 +18,7 @@ class App extends Component {
     current_song_name:'',
     current_song_album:'',
     current_song:'',
-    current_song_img:'',
+    current_song_img:'https://i1.sndcdn.com/avatars-dzNT2CdK5GL7Tj17-fo9zqQ-t500x500.jpg',
     current_song_link:'',
     //Controls
     song_count:0,
@@ -57,7 +58,7 @@ update_queue = async ()=>{
   const response = await fetch(url);
   const data = await response.json();
   this.setState({queued_list:data.results});
-  this.song_player();
+  // this.song_player();
   // console.log(this.state.queued_list);
 }
 
@@ -113,27 +114,16 @@ play_pause = async ()=>{
       
       <div className='main_section'>
 
-        <div className='left'>
+      <div className='left'>
           <Sidebar/>
-        </div>
-            
-        {/* <div className='right'> 
-          <div className='black_grad'>
-            <Searchbar_light 
-            song={this.state.searched} 
-            update_song={this.update_song}/>     
-            <Songs_container update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>
-          </div>
-        </div>         */}
+      </div>
 
-        <div className='navigate'>
-        <Searchbar_dark 
-        song={this.state.searched} 
-        update_song={this.update_song}/>
-        <Navigation_content list={this.state.queued_list} update_cnt={this.update_cnt}/>
-        </div>
-        
-        <Audio_player 
+      <Routes>
+        <Route path='/navigate' element={<Navigation_content song={this.state.searched} update_song={this.update_song} list={this.state.queued_list} update_cnt={this.update_cnt} current_song_link={this.state.current_song_link}/>}/>
+        <Route path='/' element={<Songs_container song={this.state.searched} update_song={this.update_song} update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>}/>
+      </Routes>
+      
+      <Audio_player 
         song_img={this.state.current_song_img} 
         song_name={this.state.current_song_name} 
         song_album={this.state.current_song_album} 

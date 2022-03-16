@@ -1,14 +1,17 @@
 import React from 'react';
 import './Components_CSS/Songs_container.css'
+import Searchbar_light from './Searchbar_light';
 import Song_card from './Song_card';
 
 
-const artists = ['Arijit', 'Shirley', 'Salman', 'Armaan', 'Darshan', 'Havana'];
+const artists = ['Arijit', 'Shirley', 'Salman', 'Armaan', 'Darshan', 'Havana', 'chupke chupke', 'darshan', 'Soniya'];
 const albums = ['Yaarian', 'Jugnoo', 'Sanam', 'Wake up sid', 'Lagaan', 'Raone'];
 
 function Songs_container(props) {
 
-  return <div>
+  return <div className='right'> 
+  <div className='black_grad'>
+    <Searchbar_light song={props.song} update_song={props.update_song}/> 
     <div className='heading'>
         Albums
     </div>
@@ -37,6 +40,7 @@ function Songs_container(props) {
     {artists.map(artist=>(<Song_card key={artist} name={artist} update_all = {props.update_all}/>))}      
     </div>
 
+  </div>
   </div>;
   
 }

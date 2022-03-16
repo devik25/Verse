@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import './Components_CSS/Songs_list.css'
+import playable_icon from './images/icons/playable_icon.svg'
 
 function Songs_list(props) {
 
@@ -8,6 +9,12 @@ function Songs_list(props) {
   const[album, setAlbum] = useState('');
   const[time, setTime] = useState('');
   const[link, setLink] = useState('');
+
+  let css;
+  if(link == props.current_song_link){
+    css = {color:'#FF305C'};
+    // image = playable_icon;
+  }
 
   const fetch_songByName = async (name)=>{
     let song = name;
@@ -34,11 +41,10 @@ function Songs_list(props) {
     setTime(song_data.duration);
     setLink(link);
   }
-
   fetch_songByName(props.song);
 
   return (
-    <div className='song_list'>
+    <div style={css} className='song_list'>
         <div onClick={()=>props.update_cnt(props.num, song_name, album, link, image)} className='song_list_text'>
             <div className='serial_num'>
             {props.num}

@@ -76,7 +76,7 @@
     overflow: scroll;
   }
   .nav_box li {
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 8px 20px;
     border: 1px solid rgba(108, 108, 108, 0.2);
     border-radius: 50px;

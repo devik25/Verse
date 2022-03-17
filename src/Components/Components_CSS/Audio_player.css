@@ -253,7 +253,7 @@ audio::-webkit-media-controls-return-to-realtime-button {
 
 @media (orientation: portrait) {
   .full_playBox {
-    margin-top: 45%;
+    margin-top: 40%;
     width: 100%;
   }
 

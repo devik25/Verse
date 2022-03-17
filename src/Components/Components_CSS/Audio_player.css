@@ -104,7 +104,7 @@
 }
 
 audio {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.596);
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -114,7 +114,7 @@ audio {
 
 audio::-webkit-media-controls-panel {
   margin-left: 20px;
-  /* background-color: #070e16; */
+  background-color: rgba(255, 255, 255, 0.445);
 }
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-play-button,
@@ -174,7 +174,7 @@ audio::-webkit-media-controls-return-to-realtime-button {
 }
 
 .full_playBox {
-  width: 800px;
+  width: 52%;
   margin: auto;
   margin-top: 8%;
   display: flex;
@@ -199,6 +199,7 @@ audio::-webkit-media-controls-return-to-realtime-button {
   font-weight: 500;
   font-size: 42px;
   color: white;
+  text-align: center;
 }
 .full_playbox_album {
   width: fit-content;
@@ -206,6 +207,7 @@ audio::-webkit-media-controls-return-to-realtime-button {
   font-size: 22px;
   margin: 10px 0 30px 0;
   color: white;
+  text-align: center;
 }
 
 .full_prev {
@@ -234,6 +236,30 @@ audio::-webkit-media-controls-return-to-realtime-button {
   display: flex;
   align-items: center;
   margin: auto;
-  padding: 0 2%;
+  padding: 0 3%;
   margin-top: 2%;
+}
+
+@media (orientation: portrait) {
+  .full_playBox {
+    margin-top: 50%;
+    width: 100%;
+  }
+
+  .full_playbox_title {
+    font-size: 26px;
+  }
+
+  .full_playbox_album {
+    font-size: 18px;
+    margin-bottom: 30%;
+  }
+
+  .full_controls {
+    margin-top: 5%;
+  }
+
+  .full_audio_image {
+    width: 80%;
+  }
 }

@@ -6,7 +6,7 @@
 }
 
 .slider_container.full {
-  width: 80%;
+  width: 78%;
 }
 
 .slider {
@@ -151,9 +151,13 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 @media (orientation: portrait) {
-  .slider_container.normal,
+  .slider_container,
   .volume_slider,
   .volume {
     display: none;
+  }
+
+  .slider_container.slider_container.full {
+    display: flex;
   }
 }

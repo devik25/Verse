@@ -1,8 +1,10 @@
 .Searchbar {
   display: flex;
   justify-content: space-between;
+  /* background-color: #ffffff; */
   align-items: center;
-  margin: 30px 50px 250px 50px;
+  margin: 30px 50px 50px 20%;
+  z-index: 1;
 }
 
 .search_holder {
@@ -10,7 +12,7 @@
 }
 
 .Searchbar.dark {
-  margin: 30px 50px 30px 50px;
+  margin: 30px 50px 30px 20%;
 }
 
 .search:focus {
@@ -86,13 +88,13 @@
     display: none;
   }
   .Searchbar {
-    margin: 30px 15px 30px 15px;
+    margin: 30px 15px 30px 40%;
   }
   .search {
-    width: 100%;
+    width: 75%;
     margin-right: -5px;
   }
   .Searchbar.dark {
-    margin: 30px 15px 30px 15px;
+    margin: 30px 15px 30px 40%;
   }
 }

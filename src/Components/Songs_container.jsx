@@ -11,7 +11,7 @@ function Songs_container(props) {
 
   return <div className='right'> 
   <div className='black_grad'>
-    <Searchbar_light song={props.song} update_song={props.update_song}/> 
+     
     <div className='heading'>
         Albums
     </div>

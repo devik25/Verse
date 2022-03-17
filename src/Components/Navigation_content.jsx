@@ -9,7 +9,7 @@ function Navigation_content(props) {
   let cnt=1;
   return (
     <div className='navigate'>
-    <Searchbar_dark song={props.song} update_song={props.update_song}/> 
+    
     <div className='container_navigate'>
     <div className='heading_navigate'>{props.song}</div>
 

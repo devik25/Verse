@@ -5,15 +5,17 @@
 /* Right section */
 .right {
   background-color: #070e16;
-  background-image: url("./Components/images/icons/cover_prop.png");
+  /* background-image: url("./Components/images/icons/cover_prop.png"); */
   background-size: cover;
   position: absolute;
+  z-index: -2;
   top: 0;
   left: 17.5%;
   right: 0;
   bottom: 0;
   padding-bottom: 5%;
   overflow-x: scroll;
+  padding-top: 150px;
 }
 
 .right::-webkit-scrollbar {
@@ -40,13 +42,14 @@
     #04040d
   );
   width: 100%;
-  height: 1450px;
+  height: 1200px;
 }
 
 /* Navigation pages */
 .navigate {
   background-color: white;
   position: absolute;
+  z-index: -2;
   top: 0;
   left: 17.5%;
   right: 0;
@@ -65,10 +68,11 @@
     top: 0;
     right: 0;
     left: 0;
-    bottom: 82%;
+    bottom: 80%;
     z-index: -1;
   }
   .right {
+    padding-top: 50px;
     z-index: -2;
     background-color: #070e16;
     background-image: none;
@@ -78,7 +82,7 @@
     overflow-x: hidden;
     left: 0;
     right: 0;
-    top: 18%;
+    top: 20%;
   }
   .black_grad {
     background-image: none;

@@ -25,7 +25,7 @@ function Searchbar_light(props) {
 
  <Link to={'/search'}>
   <form onSubmit={handleSubmit}>
-    <input onChange={handleChange} className='search' type="text"></input>
+    <input onChange={handleChange} className='search' type="text" placeholder="search"></input>
   </form>
   </Link>
 

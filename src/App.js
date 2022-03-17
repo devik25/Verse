@@ -121,6 +121,13 @@ play_pause = async ()=>{
       </Routes>
 
       <Routes>
+        <Route path='/search' element={<Searchbar_dark song={this.state.searched} update_song={this.update_song}/>}/>
+        <Route path='/' element={<Searchbar_light song={this.state.searched} update_song={this.update_song}/> }/>
+      </Routes>
+
+      
+
+      <Routes>
         <Route path='/search' element={<Navigation_content song={this.state.searched} update_song={this.update_song} list={this.state.queued_list} update_cnt={this.update_cnt} current_song_link={this.state.current_song_link}/>}/>
         <Route path='/' element={<Songs_container song={this.state.searched} update_song={this.update_song} update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>}/>
       </Routes>

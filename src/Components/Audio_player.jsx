@@ -11,6 +11,7 @@ import graph_play from '../Components/images/controls/graph.gif'
 function Audio_player(props) {
   const audio = useRef(0);
   const slide = useRef(0);
+  const slide2 = useRef(0);
   const volume = useRef(0);
 
   const[grap, setGrap] = useState(graph);
@@ -71,7 +72,9 @@ function Audio_player(props) {
     }
 
     //thumb update
+    // console.log(curr_duration)
     slide.current.value = curr_duration;
+    slide2.current.value = curr_duration;
   }, [current])
 
   const update_duration = (e)=>{
@@ -115,7 +118,7 @@ function Audio_player(props) {
           <button className='next btn_reset' onClick={()=>props.next_song()}></button>
           <div className='slider_container'>
             <div className='duration'>{curr_min}:{curr_sec}</div>
-            <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
+            <input className='slider' ref={slide2} onChange={update_duration} type={'range'} step={0.01}></input>
             <div className='duration'>{dur_min}:{dur_sec}</div>
           </div>
 

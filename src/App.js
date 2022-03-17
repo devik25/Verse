@@ -35,6 +35,7 @@ update_all = async(name, album, link, img)=>{
   await this.setState({current_song_img:img});
   await this.setState({current_song_name:name});
   await this.setState({current_song_album:album});
+  this.setState({status:'play'});
 }
 
 update_cnt = async(count, name, album, link, img)=>{
@@ -85,7 +86,7 @@ next_song = async ()=>{
   if(cnt == l-1) cnt=0;
   else cnt++;
   await this.setState({song_count:cnt});
-  console.log(cnt);
+  // console.log(cnt);
   this.song_player();
 }
 
@@ -129,7 +130,7 @@ play_pause = async ()=>{
 
       <Routes>
         <Route path='/search' element={<Navigation_content song={this.state.searched} update_song={this.update_song} list={this.state.queued_list} update_cnt={this.update_cnt} current_song_link={this.state.current_song_link}/>}/>
-        <Route path='/' element={<Songs_container song={this.state.searched} update_song={this.update_song} update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>}/>
+        <Route path='/' element={<Songs_container song={this.state.current_song_link} update_song={this.update_song} update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>}/>
       </Routes>
       
       <Audio_player 

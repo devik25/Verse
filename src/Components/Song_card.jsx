@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Components_CSS/Song_card.css';
-import play_album from './images/icons/play_album.svg'
+import play from './images/icons/play_album.svg'
+import graph from '../Components/images/controls/graph.gif'
 
 
 function Song_card(props) {
@@ -25,7 +26,7 @@ function Song_card(props) {
     let img = song_data.image.slice(0, song_data.image.length-11);
     img+='500x500.jpg';
     await setImage(img);
-    console.log(song_name);
+    // console.log(song_name);
     setLink(link);
     // props.update_all(song_data.song, song_data.album, song_data.url, song_data.image);
   }
@@ -36,8 +37,9 @@ function Song_card(props) {
 
   return <div style={{backgroundImage: 'url('+ image +')'}} className='song_card'>
     <div className='song_card_black'>
+    {/* style={{backgroundImage:props.status=='play'?"url("+pause+")":"url("+ play+")"}} */}
 
-      <img onClick={()=>{props.update_all(song_name, album, link, image)}} style={{width:'50px'}} src={play_album}/>
+      <img onClick={()=>{props.update_all(song_name, album, link, image)}} style={{width:'50px'}} src={props.song==link?graph: play}/>
 
 
     </div>

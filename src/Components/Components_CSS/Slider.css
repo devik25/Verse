@@ -5,6 +5,10 @@
   margin: 0 20px;
 }
 
+.slider_container.full {
+  width: 80%;
+}
+
 .slider {
   width: 100%;
   cursor: pointer;
@@ -147,7 +151,7 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 @media (orientation: portrait) {
-  .slider_container,
+  .slider_container.normal,
   .volume_slider,
   .volume {
     display: none;

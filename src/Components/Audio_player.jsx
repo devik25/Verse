@@ -115,7 +115,7 @@ function Audio_player(props) {
           <button className='next btn_reset' onClick={()=>props.next_song()}></button>
           <div className='slider_container'>
             <div className='duration'>{curr_min}:{curr_sec}</div>
-            <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
+            <input className='slider normal' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
             <div className='duration'>{dur_min}:{dur_sec}</div>
           </div>
 
@@ -143,8 +143,8 @@ function Audio_player(props) {
           </div>
           
           <div className='full_controls'>
-              <div onClick={()=>{setController({display:'none'})}}>back</div>
-              <div className='slider_container'>
+              <div onClick={()=>{setController({display:'none'})}} className='full_back'></div>
+              <div className='slider_container full'>
                 <div className='duration'>{curr_min}:{curr_sec}</div>
                 <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
                 <div className='duration'>{dur_min}:{dur_sec}</div>

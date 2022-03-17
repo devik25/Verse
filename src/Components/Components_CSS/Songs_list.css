@@ -64,4 +64,10 @@
   .song_list_name {
     width: 250px;
   }
+  .song_list_text {
+    font-size: 15px;
+  }
+  .song_list_time {
+    font-size: 14px;
+  }
 }

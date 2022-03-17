@@ -233,6 +233,10 @@ audio::-webkit-media-controls-return-to-realtime-button {
 }
 
 .full_controls {
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   margin: auto;
@@ -240,9 +244,16 @@ audio::-webkit-media-controls-return-to-realtime-button {
   margin-top: 2%;
 }
 
+.full_browse {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+}
+
 @media (orientation: portrait) {
   .full_playBox {
-    margin-top: 50%;
+    margin-top: 45%;
     width: 100%;
   }
 
@@ -252,7 +263,7 @@ audio::-webkit-media-controls-return-to-realtime-button {
 
   .full_playbox_album {
     font-size: 18px;
-    margin-bottom: 30%;
+    margin-bottom: 20%;
   }
 
   .full_controls {

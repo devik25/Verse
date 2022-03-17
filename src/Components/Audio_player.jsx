@@ -135,7 +135,7 @@ function Audio_player(props) {
             <img className='full_audio_image' src={props.song_img}></img>
               <div className='full_playbox_title'>{props.song_name}</div>
               <div className='full_playbox_album'>{props.song_album}</div>
-              <div style={{display:'flex', alignItems:'center'}}>
+              <div className='full_browse' >
                 <button className='full_prev btn_reset'  onClick={()=>props.prev_song()}></button>
                 <button style={{backgroundImage:props.status=='play'?"url("+pause+")":"url("+ play+")"}} className='full_play btn_reset' onClick={()=>props.play_pause()}></button>
                 <button className='full_next btn_reset' onClick={()=>props.next_song()}></button>

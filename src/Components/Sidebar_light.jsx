@@ -10,14 +10,14 @@ import radio from './images/icons/radio.svg';
 import liked from './images/icons/like.svg';
 import history from './images/icons/history.svg'
 
-function Sidebar() {
+function Sidebar_light() {
 
   return<div className='left'>
-  <h1 className='container'>
-      <Link to={'/'}><img className='logo' src={logo} width="90px" /></Link>
+  <h1 className='container light'>
+      <Link to={'/'}><img className='logo light' src={logo} width="90px" /></Link>
 
       <div className='nav_box_contain'>
-      <div className='nav_box'>
+      <div className='nav_box light'>
           <div>DISCOVER</div>
           <ul>
               <li><img className='nav_icons' src={trend}/>Trending</li>
@@ -41,4 +41,4 @@ function Sidebar() {
   </div>
 }
 
-export default Sidebar;
+export default Sidebar_light;

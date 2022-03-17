@@ -1,7 +1,4 @@
 .container {
-  /* position: absolute;
-  bottom: 0;
-  top: 0; */
   background-color: #0b121b;
   width: 100%;
   height: 100%;
@@ -9,6 +6,8 @@
 
 .logo {
   margin: 30px 0 0 50px;
+  width: 90px;
+  height: auto;
 }
 
 .nav_box {
@@ -29,6 +28,8 @@
 }
 
 .nav_box li {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   padding-left: 15px;
   font-weight: 300;
@@ -49,4 +50,59 @@
 .nav_icons {
   height: 14px;
   margin-right: 16px;
+}
+
+@media (orientation: portrait) {
+  .logo {
+    margin: 30px 0 0 15px;
+  }
+  .nav_box {
+    display: flex;
+    margin: 15px 15px;
+  }
+  .nav_box div {
+    display: none;
+  }
+  .nav_box ul {
+    align-items: center;
+    display: flex;
+  }
+  .nav_box_contain::-webkit-scrollbar {
+    display: none;
+  }
+  .nav_box_contain {
+    align-items: center;
+    display: flex;
+    overflow: scroll;
+  }
+  .nav_box li {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: 1px solid rgba(108, 108, 108, 0.2);
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 16px;
+    width: max-content;
+    margin-right: 20px;
+    background-color: #1f2636;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+  .nav_icons {
+    margin-right: 8px;
+  }
+  .container {
+    background-color: #070e16;
+  }
+  .container.light {
+    background-color: #fff;
+  }
+  .logo.light {
+    filter: invert(6%) sepia(38%) saturate(807%) hue-rotate(172deg)
+      brightness(34%) contrast(152%);
+    -webkit-filter: invert(6%) sepia(38%) saturate(807%) hue-rotate(172deg)
+      brightness(24%) contrast(102%);
+  }
 }

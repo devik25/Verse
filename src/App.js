@@ -4,6 +4,7 @@ import Sidebar from './Components/Sidebar';
 import Searchbar_light from './Components/Searchbar_light';
 import Song_card from './Components/Song_card';
 import Songs_container from './Components/Songs_container';
+import Sidebar_light from './Components/Sidebar_light';
 import Searchbar_dark from './Components/Searchbar_dark'
 import Navigation_content from './Components/Navigation_content';
 import Audio_player from './Components/Audio_player';
@@ -114,9 +115,10 @@ play_pause = async ()=>{
       
       <div className='main_section'>
 
-      <div className='left'>
-          <Sidebar/>
-      </div>
+      <Routes>
+        <Route path='/search' element={<Sidebar_light/>}/>
+        <Route path='/' element={<Sidebar/>}/>
+      </Routes>
 
       <Routes>
         <Route path='/search' element={<Navigation_content song={this.state.searched} update_song={this.update_song} list={this.state.queued_list} update_cnt={this.update_cnt} current_song_link={this.state.current_song_link}/>}/>

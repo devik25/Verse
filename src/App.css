@@ -57,7 +57,12 @@
 
 @media (orientation: portrait) {
   .left {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 80%;
+    z-index: 1;
   }
   .right,
   .navigate {

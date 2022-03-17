@@ -6,7 +6,7 @@
 }
 
 .search_holder {
-  width: 500px;
+  /* width: 700px; */
 }
 
 .Searchbar.dark {
@@ -22,7 +22,7 @@
   border: 1px solid #747474;
   background-color: rgba(255, 255, 255, 0.295);
   border-radius: 40px;
-  width: 100%;
+  width: 600px;
   font-size: 20px;
   font-weight: 300;
   color: #ffffff;

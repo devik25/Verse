@@ -18,3 +18,16 @@
   margin-left: 50px;
   margin-bottom: 50px;
 }
+
+@media (orientation: portrait) {
+  .heading {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    color: white;
+  }
+  .songs_container {
+    margin-left: 15px;
+  }
+}

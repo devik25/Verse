@@ -13,7 +13,6 @@ function Audio_player(props) {
   const slide = useRef(0);
   const volume = useRef(0);
 
-
   const[grap, setGrap] = useState(graph);
   const[current, setcurrent] = useState(0);
   const[duration, setduration] = useState(0);
@@ -44,8 +43,7 @@ function Audio_player(props) {
   useEffect(()=>{
     let minute = 0;
     let curr_duration = (current/duration)*100;
-    // console.log(current);
-    // console.log(duration);
+
     //Change track after completion
     if(current === duration){
       props.next_song();
@@ -85,15 +83,23 @@ function Audio_player(props) {
     audio.current.volume = e.currentTarget.value/100;
   }
 
-  const down = ()=>{
-    // console.log(audio.current.download);
-    // audio.current.controls();
+  // Full player
+  let full_player_css = {
+    backgroundImage:"url("+props.song_img+")",
   }
+
+  const[controller, setController]=useState({display:'none'});
+
 
 
   return (
+
+    //First level
+    <div>
+    
+    {/* child 1 */}
     <div className='playbar'>
-      <div className='playBox'>
+      <div onClick={()=>{setController({})}} className='playBox'>
         <img className='graph' src={grap}></img>
         <img className='audio_image' src={props.song_img}></img>
         <div>
@@ -114,25 +120,58 @@ function Audio_player(props) {
           </div>
 
           <img className='volume' src={volume_on}></img>
-          <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>
-          {/* <a href={props.song} download> download </a> */}
-          <audio 
-          ref={audio} 
-          className='player' 
-          src={props.song} 
-          onLoadedData={(e)=>{
-            setduration(e.currentTarget.duration.toFixed(0))
-          }}
-
-          onTimeUpdate={(e)=>{
-            setcurrent(e.currentTarget.currentTime.toFixed(0));
-          }}
-          autoPlay 
-          type="audio/mp3"
-          controls
-          ></audio>
+          <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>          
 
       </div>     
+    </div>
+
+    {/* child2 */}
+    <div style={controller} className='full_player'>
+      <div style={full_player_css}  className='full_player_img'></div>
+
+      <div className='full_player_control'>
+
+          <div className='full_playBox'>
+            <img className='full_audio_image' src={props.song_img}></img>
+              <div className='full_playbox_title'>{props.song_name}</div>
+              <div className='full_playbox_album'>{props.song_album}</div>
+              <div style={{display:'flex', alignItems:'center'}}>
+                <button className='full_prev btn_reset'  onClick={()=>props.prev_song()}></button>
+                <button style={{backgroundImage:props.status=='play'?"url("+pause+")":"url("+ play+")"}} className='full_play btn_reset' onClick={()=>props.play_pause()}></button>
+                <button className='full_next btn_reset' onClick={()=>props.next_song()}></button>
+              </div>
+          </div>
+          
+          <div className='full_controls'>
+              <div onClick={()=>{setController({display:'none'})}}>back</div>
+              <div className='slider_container'>
+                <div className='duration'>{curr_min}:{curr_sec}</div>
+                <input className='slider' ref={slide} onChange={update_duration} type={'range'} step={0.01}></input>
+                <div className='duration'>{dur_min}:{dur_sec}</div>
+              </div>
+
+              <img className='volume' src={volume_on}></img>
+              <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>
+              <audio 
+              ref={audio} 
+              className='player' 
+              src={props.song} 
+              onLoadedData={(e)=>{
+                setduration(e.currentTarget.duration.toFixed(0))
+              }}
+
+              onTimeUpdate={(e)=>{
+                setcurrent(e.currentTarget.currentTime.toFixed(0));
+              }}
+              autoPlay 
+              type="audio/mp3"
+              controls
+              ></audio>
+          </div>
+                
+      </div>
+
+    </div>
     </div>
   )
 }

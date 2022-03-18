@@ -125,6 +125,8 @@ function Audio_player(props) {
           <img className='volume' src={volume_on}></img>
           <input ref={volume} type={'range'} onChange={update_volume} className='volume_slider'></input>          
 
+          {/* <a href={props.song} download="filename.mp3">DownloadButton</a>  */}
+
       </div>     
     </div>
 
@@ -158,7 +160,8 @@ function Audio_player(props) {
               <audio 
               ref={audio} 
               className='player' 
-              src={props.song} 
+              src={props.song}
+              title={props.song_name}
               onLoadedData={(e)=>{
                 setduration(e.currentTarget.duration.toFixed(0))
               }}

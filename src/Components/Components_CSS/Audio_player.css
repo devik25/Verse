@@ -104,17 +104,22 @@
 }
 
 audio {
-  background-color: rgba(255, 255, 255, 0.596);
+  transform: rotate(90deg);
+  background-color: rgb(255, 255, 255);
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
 }
 
 audio::-webkit-media-controls-panel {
   margin-left: 20px;
-  background-color: rgba(255, 255, 255, 0.445);
+  background-color: transparent;
 }
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-play-button,

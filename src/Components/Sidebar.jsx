@@ -20,19 +20,19 @@ function Sidebar() {
       <div className='nav_box'>
           <div>DISCOVER</div>
           <ul>
-              <li><img className='nav_icons' src={trend}/>Trending</li>
-              <li><img className='nav_icons' src={new_release}/>New Release</li>
-              <li><img className='nav_icons' src={recommend}/>Recommended</li>
+              <li><Link to={'/trending'}><img className='nav_icons' src={trend}/>Trending</Link></li>
+              <li><Link to={'/new_release'}><img className='nav_icons' src={new_release}/>New Release</Link></li>
+              <li><Link to={'/recommended'}><img className='nav_icons' src={recommend}/>Recommended</Link></li>
           </ul>
       </div>
 
       <div className='nav_box'>
           <div>LIBRARY</div>
           <ul>
-              <li><img className='nav_icons' src={albums}/>Albums</li>
-              <li><img className='nav_icons' src={radio}/>Radio</li>
-              <li><img className='nav_icons' src={liked}/>Liked</li>
-              <li><img className='nav_icons' src={history}/>History</li>
+              <li><Link to={'/albums'}><img className='nav_icons' src={albums}/>Albums</Link></li>
+              <li><Link to={'/radio'}><img className='nav_icons' src={radio}/>Radio</Link></li>
+              <li><Link to={'/liked'}><img className='nav_icons' src={liked}/>Liked</Link></li>
+              <li><Link to={'/history'}><img className='nav_icons' src={history}/>History</Link></li>
           </ul>
       </div>
       </div>

@@ -8,6 +8,7 @@ import Sidebar_light from './Components/Sidebar_light';
 import Searchbar_dark from './Components/Searchbar_dark'
 import Navigation_content from './Components/Navigation_content';
 import Audio_player from './Components/Audio_player';
+import Under_work from './Components/Under_work';
 import './App.css';
 
 
@@ -118,7 +119,7 @@ play_pause = async ()=>{
 
       <Routes>
         <Route path='/search' element={<Sidebar_light/>}/>
-        <Route path='/' element={<Sidebar/>}/>
+        <Route path='*' element={<Sidebar/>}/>
       </Routes>
 
       <Routes>
@@ -131,6 +132,7 @@ play_pause = async ()=>{
       <Routes>
         <Route path='/search' element={<Navigation_content song={this.state.searched} update_song={this.update_song} list={this.state.queued_list} update_cnt={this.update_cnt} current_song_link={this.state.current_song_link}/>}/>
         <Route path='/' element={<Songs_container song={this.state.current_song_link} update_song={this.update_song} update_all={this.update_all} fetch_songByName={this.fetch_songByName}/>}/>
+        <Route path='*' element={<Under_work/>}/>
       </Routes>
       
       <Audio_player 

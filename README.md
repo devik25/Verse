@@ -26,83 +26,19 @@
   <a href="#features">Features</a> •
   <a href="#installation">Installation</a> •
   <a href="#quick-start">Quick Start</a> •
-  <a href="#project-leaders">Project Leaders</a> •
-  <a href="#contributors">Contributors</a> •
-  <a href="/doc/en-US/user_guide.md">User Guide</a> •
-  <a href="/doc/en-US/dev_guide.md">Developer Guide</a>
 </p>
 
 ## Features
 
-- [x] [Intrusion Detection System](/doc/en-US/user_guide.md#intrusion-detection-system)
-- [x] [Firewall](/doc/en-US/user_guide.md#firewall)
-- [x] [Web Application Firewall](/doc/en-US/user_guide.md#web-application-firewall)
-- [x] [AntiVirus](/doc/en-US/user_guide.md#antivirus)
-- [x] [Malware Analysis](/doc/en-US/user_guide.md#setting-up-malware-analysis)
-- [x] [Server Log Monitor](/doc/en-US/user_guide.md#server-log-monitor)
-- [x] [System Log Monitor](/doc/en-US/user_guide.md#system-log-monitor)
-- [x] [Local Web Deface Detection & Prevention System](/doc/en-US/user_guide.md#web-deface-detection)
-- [x] [Auto Web Server Patcher](/doc/en-US/user_guide.md#auto-server-patcher)
-- [x] [Insecure Headers Detection](/doc/en-US/user_guide.md#insecure-headers)
-- [x] [IoT Anonymity Checker](/doc/en-US/user_guide.md#iot-anonymity-checker)
-- [x] [Auto Report Generation Using OSINT](/doc/en-US/user_guide.md)
-- [x] [Notifying Suspicious Activities Using Various Mediums (Twitter, Telegram, Slack, Gmail, SMS, AWS)](doc/en-US/user_guide.md#setting-up-notifiers)
-- [x] [Interactive GUI For Ease Of Setting Up](/doc/en-US/user_guide.md#configuring-using-web-ui)
+- [x] Online music streaming.
+- [x] Free songs download.
+- [x] Huge content.   
+
 
 ## Installation
+Verse can be easily used on its website. Its interface is very user friendly and easy to use.
+<a href="https://verse225.netlify.app/">Click here to direct to website</a>
 
-![Setup Intro][Setup-help-animation]
-
-Before installing, please make sure to install the **[pre-requisites](/doc/en-US/user_guide.md#pre-requisites)**.
-
-To install software requirements:
-
-For apt package manager based systems:
-```shell
-$ sudo bash install_dependencies_apt.sh
-```
-For yum package manager based systems:
-```shell
-$ sudo bash install_dependencies_yum.sh
-```
-
-You can install SecureTea from PyPi package manager using the following command:
-
-`$ sudo python3 -m pip install securetea`
-
-**or**
-
-You can install SecureTea using the latest repository:
-
-```shell
-git clone https://github.com/OWASP/SecureTea-Project.git
-cd SecureTea-Project/
-sudo python3 setup.py install
-```
-
-Please make sure all dependencies are installed if anyone of the above fails.
-
-For more detailed information, refer to the [installation guide](/doc/en-US/user_guide.md#installation).
-
-## Quick Start
-
-1. Start SecureTea using one or more [**integrations**](/doc/en-US/user_guide.md#usage):
-
-    For example, running Intrusion Detection System only: `$ sudo securetea --ids`
-
-2. Start SecureTea in [**server mode**](/doc/en-US/user_guide.md#starting-up-in-server-mode):
-
-    `$ sudo securetea-server`
-
-3. Start SecureTea in [**system mode**](/doc/en-US/user_guide.md#starting-up-in-system-mode):
-
-    `$ sudo securetea-system`
-
-4. Start SecureTea in [**IoT mode**](/doc/en-US/user_guide.md#starting-up-in-iot-mode):
-
-    `$ sudo securetea-iot`
-
-For more detailed information, refer to the [usage guide](https://github.com/OWASP/SecureTea-Project/blob/master/doc/en-US/user_guide.md#usage).
 
 ## Project done by Devik Kamath
 

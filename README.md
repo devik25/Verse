@@ -13,7 +13,9 @@
 
 </h1>
 
-<h4 align="center">One stop security solution for your device<a href="https://github.com/OWASP/SecureTea-Project" target="_blank"></a></h4>
+<h4 align="center">
+**Verse** is a music streaming Web app where you can easily download and stream music completely free.
+  <a href="https://verse225.netlify.app/" target="_blank"></a></h4>
 
 <p align="center">
   <a href="#features">Features</a> •

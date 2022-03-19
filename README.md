@@ -25,7 +25,7 @@
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#installation">Installation</a> •
-  <a href="#quick-start">Quick Start</a> •
+  <a href="#quick-start">Project leader</a> •
 </p>
 
 ## Features
@@ -38,12 +38,8 @@
 ## Installation
 Verse can be easily used on its website. Its interface is very user friendly and easy to use.
 <a href="https://verse225.netlify.app/">Click here to direct to website</a>
-<video src="https://user-images.githubusercontent.com/67371806/159116924-012bead2-497c-4ce5-be6c-0469e6fc3b91.mp4" muted></video>
+<video src="https://user-images.githubusercontent.com/67371806/159116924-012bead2-497c-4ce5-be6c-0469e6fc3b91.mp4" muted autoplay></video>
 
 
 ## Project done by Devik Kamath
-
-
-Video showing quick overview
-https://user-images.githubusercontent.com/67371806/159116924-012bead2-497c-4ce5-be6c-0469e6fc3b91.mp4
 

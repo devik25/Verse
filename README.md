@@ -5,8 +5,10 @@
 <!-- ![Screenshot (1153)](https://user-images.githubusercontent.com/67371806/159117410-b2626d0b-4866-43b1-a16b-c70253bc703e.png) -->
 <!-- ![Screenshot (1155)](https://user-images.githubusercontent.com/67371806/159117413-d89ff060-e715-486f-9eb0-7303935665a7.png) -->
 <!-- ![Logo](https://user-images.githubusercontent.com/67371806/159117462-9c681bf5-13da-41ba-9df9-95fb74ee0473.svg) -->
+<!-- ![Logo_dark](https://user-images.githubusercontent.com/67371806/159117480-a42dc8f4-970f-4c24-ae29-2548ae6ae5b8.svg) -->
 
-  <img src="https://user-images.githubusercontent.com/67371806/159117462-9c681bf5-13da-41ba-9df9-95fb74ee0473.svg" align="center" alt="Verse" width="100"></a>
+
+  <img src="https://user-images.githubusercontent.com/67371806/159117480-a42dc8f4-970f-4c24-ae29-2548ae6ae5b8.svg" align="center" alt="Verse" width="100"></a>
 
   <br>
   Verse

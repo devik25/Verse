@@ -38,6 +38,7 @@
 ## Installation
 Verse can be easily used on its website. Its interface is very user friendly and easy to use.
 <a href="https://verse225.netlify.app/">Click here to direct to website</a>
+<video src="https://user-images.githubusercontent.com/67371806/159116924-012bead2-497c-4ce5-be6c-0469e6fc3b91.mp4" muted></video>
 
 
 ## Project done by Devik Kamath

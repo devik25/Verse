@@ -8,11 +8,9 @@
 <!-- ![Logo_dark](https://user-images.githubusercontent.com/67371806/159117480-a42dc8f4-970f-4c24-ae29-2548ae6ae5b8.svg) -->
 
 
-  <img src="https://user-images.githubusercontent.com/67371806/159117480-a42dc8f4-970f-4c24-ae29-2548ae6ae5b8.svg" align="center" alt="Verse" width="100"></a>
+  <img src="https://user-images.githubusercontent.com/67371806/159117480-a42dc8f4-970f-4c24-ae29-2548ae6ae5b8.svg" align="center" alt="Verse" width="150"></a>
+  <br>
 
-  <br>
-  Verse
-  <br>
 </h1>
 
 <h4 align="center">One stop security solution for your device<a href="https://github.com/OWASP/SecureTea-Project" target="_blank"></a></h4>

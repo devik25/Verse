@@ -4,8 +4,10 @@
 <!-- ![Screenshot (1154)](https://user-images.githubusercontent.com/67371806/159117409-6d4611f1-6cc1-4ef8-816a-07a142714360.png) -->
 <!-- ![Screenshot (1153)](https://user-images.githubusercontent.com/67371806/159117410-b2626d0b-4866-43b1-a16b-c70253bc703e.png) -->
 <!-- ![Screenshot (1155)](https://user-images.githubusercontent.com/67371806/159117413-d89ff060-e715-486f-9eb0-7303935665a7.png) -->
+<!-- ![Logo](https://user-images.githubusercontent.com/67371806/159117462-9c681bf5-13da-41ba-9df9-95fb74ee0473.svg) -->
 
-  <img src="https://user-images.githubusercontent.com/67371806/159117410-b2626d0b-4866-43b1-a16b-c70253bc703e.png" align="center" alt="SecureTea" width="100"></a>
+  <img src="https://user-images.githubusercontent.com/67371806/159117462-9c681bf5-13da-41ba-9df9-95fb74ee0473.svg" align="center" alt="Verse" width="100"></a>
+
   <br>
   Verse
   <br>

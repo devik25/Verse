@@ -1,9 +1,9 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/OWASP/SecureTea-Project">
+  <a href="https://github.com/Devik225/Verse">
   <img src="img/logo/secure-tea-white.png" align="center" alt="SecureTea" width="100"></a>
   <br>
-  OWASP SecureTea
+  Verse
   <br>
 </h1>
 
@@ -19,23 +19,10 @@
   <a href="/doc/en-US/dev_guide.md">Developer Guide</a>
 </p>
 
-[![Build Status][Travis-badge]][Travis]
-[![Codacy Badge][Codacy-badge]][Codacy]
-[![PyPI][PyPi-badge]][PyPi]
-[![GitHub][License-badge]][License]
-[![Telegram][Telegram-badge]][Telegram]
-[![Version][Version-badge]][Version]
-[![Tag][Tag-badge]][Tag]
-[![GitHub issues][Issues-badge]][Issues]
-[![GitHub pull requests][PR-badge]][PRs]
-[![GSOC 2019][GSOC-2019-badge]][GSOC-OWASP]
-[![Follow Us](https://img.shields.io/twitter/url/https/secureteatool.svg?label=SecureTea%20Project&style=social)](https://twitter.com/secureteatool)
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
-[![Heroku][Heroku]](https://secure-tea.herokuapp.com/)
 
-**The OWASP SecureTea Project** provides a one-stop security solution for various devices (personal computers / servers / IoT devices).
+**Verse** is a music streaming web app. Presently it has all Indian content. World wide content is also going to add soon. 
 
-![dashboard](https://user-images.githubusercontent.com/70275323/136699660-beb99831-1122-4b75-8a1e-79e23ea18d3f.png)
+![dashboard](https://user-images.githubusercontent.com/67371806/159116924-012bead2-497c-4ce5-be6c-0469e6fc3b91.mp4)
 
 ## Features
 
